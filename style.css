@@ -1,0 +1,98 @@
+@keyframes bounce {
+  /* Let's make the ball zig-zag! */
+  
+  0% {
+    margin-left:0%; 
+    margin-top:0%;
+    width: 100;
+  }
+  
+  5% {
+    margin-left:20%; 
+    width: 200;
+  }
+
+  50% {
+    margin-left:40%; 
+    margin-bottom:100%;
+    width: 100;
+  }
+
+  65% {
+    margin-left:60%; 
+    margin-top:50%;
+    width: 50;
+  }
+
+  100% {
+    margin-left:80%; 
+    margin-top:0%;
+    width: 20;
+  }
+}
+
+#ball1 {
+  position: absolute;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+
+.message{
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  z-index: 2;
+}
+
+#court{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 70vh;
+}
+
+
+.lady{
+  width:200px;
+  z-index: 1;
+}
+
+#ladybox{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#federer{
+  width:400;
+}
+
+.shape{
+  position: absolute;
+  z-index: -2;
+}
+
+#circle1{
+  right: 20px;
+}
+#circle2{
+  right: 100px;
+}
+
+#rect1{
+  bottom: 0px;
+  right: 500px;
+}
+
+#rect2{
+  z-index: -5;
+}
+
+
+@media (max-width: 10in){
+  .message img{
+    width: 70%;
+  }
+}

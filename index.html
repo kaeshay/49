@@ -1,0 +1,48 @@
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	
+	</style>
+</head>
+<body background="assets/background.png">
+	<img id="ball1" src="assets/tennis2.png">
+	<div id="ladybox"></div>
+	<div class="message foreground">
+		<img id="happy" src="assets/happy.png">
+		<img id="birthday" src="assets/birthday.png">
+	</div>
+	<img id="court" src="assets/court.png">
+	<img src="assets/net.png">
+	<img src="assets/stick1.png">
+	<img src="assets/stick2.png">
+	<img src="assets/wine.png">
+	<img src="assets/tennis1.png">
+	<img id="federer" src="assets/federer.png">
+	<img class="shape" id="circle1" src="assets/circle1.png">
+	<img class="shape" id="circle2" src="assets/circle2.png">
+	<img class="shape" id="circle3" src="assets/circle3.png">
+	<img class="shape" id="rect1" src="assets/rectangle1.png">
+	<img class="shape" id="rect2" src="assets/rectangle2.png">
+
+</body>
+<script>
+	var ladies = [];
+	for (var i = 1; i < 6; i++){
+		ladies[i] = document.createElement("img");
+		ladies[i].src = "assets/lady" + i + ".png";
+		ladies[i].className ="draggable lady";
+		document.getElementById("ladybox").append(ladies[i]);
+	}
+
+
+$(function() {
+    $( ".draggable" ).draggable();
+  });
+$('.foreground').mousedown(function(ev) {
+    $('.background').trigger(ev);
+});
+</script>
+</html>
