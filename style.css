@@ -90,7 +90,6 @@
   z-index: -5;
 }
 
-
 @media (max-width: 10in){
   .message img{
     width: 70%;
